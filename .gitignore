@@ -40,5 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# raw source assets (originals live only locally, not needed by the app)
-/assets
+
