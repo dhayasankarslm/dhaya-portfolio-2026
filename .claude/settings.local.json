@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:skiper-ui.com)",
+      "WebFetch(domain:ui.watermelon.sh)",
+      "WebFetch(domain:motion-primitives.com)",
+      "WebFetch(domain:haikei.app)"
+    ]
+  }
+}
