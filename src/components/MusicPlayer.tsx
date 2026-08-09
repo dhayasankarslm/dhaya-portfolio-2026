@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import DepthCarousel from "./DepthCarousel";
-import { loadSpotifyIframeApi } from "@/lib/spotifyIframeApi";
+import { loadSpotifyIframeApi, type SpotifyController } from "@/lib/spotifyIframeApi";
 
 export interface PlayerTrack {
   id: string;
@@ -18,7 +18,7 @@ export default function MusicPlayer({
   className?: string;
 }) {
   const hostRef = useRef<HTMLDivElement>(null);
-  const controllerRef = useRef<any>(null);
+  const controllerRef = useRef<SpotifyController | null>(null);
   const [active, setActive] = useState(0);
   const [isPaused, setIsPaused] = useState(true);
 
@@ -30,7 +30,7 @@ export default function MusicPlayer({
       IFrameAPI.createController(
         hostRef.current,
         { uri: `spotify:track:${tracks[0].id}`, width: "100%", height: "80" },
-        (controller: any) => {
+        (controller: SpotifyController) => {
           if (disposed) {
             try {
               controller.destroy?.();
@@ -38,7 +38,8 @@ export default function MusicPlayer({
             return;
           }
           controllerRef.current = controller;
-          controller.addListener("playback_update", (e: any) => {
+          controller.addListener("playback_update", (...args: unknown[]) => {
+            const e = args[0] as { data: { isPaused: boolean } };
             setIsPaused(e.data.isPaused);
           });
         }

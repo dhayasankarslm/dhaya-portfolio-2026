@@ -1,25 +1,27 @@
-interface SpotifyIframeAPI {
-  createController: (options: { uri: string; width?: number; height?: number; }) => Promise<SpotifyController>;
-}
-
-interface SpotifyController {
-  play: () => Promise<void>;
-  pause: () => Promise<void>;
-  togglePlay: () => Promise<void>;
-  getVolume: () => Promise<number>;
-  setVolume: (volume: number) => Promise<void>;
-  getCurrentTrack: () => Promise<SpotifyTrack | null>;
+export interface SpotifyController {
+  play: () => void;
+  pause: () => void;
+  resume: () => void;
+  togglePlay: () => void;
+  seek: (seconds: number) => void;
+  loadUri: (uri: string) => void;
+  destroy: () => void;
   addListener: (event: string, callback: (...args: unknown[]) => void) => void;
   removeListener: (event: string, callback: (...args: unknown[]) => void) => void;
 }
 
-interface SpotifyTrack {
+export interface SpotifyControllerOptions {
   uri: string;
-  name: string;
-  artists: Array<{ name: string }>;
-  album: { name: string; images: Array<{ url: string }> };
-  duration_ms: number;
-  is_playing: boolean;
+  width?: string | number;
+  height?: string | number;
+}
+
+export interface SpotifyIframeAPI {
+  createController: (
+    element: HTMLElement,
+    options: SpotifyControllerOptions,
+    callback: (controller: SpotifyController) => void
+  ) => void;
 }
 
 let apiPromise: Promise<SpotifyIframeAPI> | null = null;
