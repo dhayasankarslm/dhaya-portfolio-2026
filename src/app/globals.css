@@ -17,7 +17,7 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --font-sans: "General Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Clash Display", "General Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "General Sans", ui-serif, serif;
 }
 
 html,
@@ -42,8 +42,10 @@ body {
 }
 
 .font-display {
-  font-family: "Clash Display", "General Sans", ui-sans-serif, system-ui, sans-serif;
-  font-weight: 600;
+  font-family: "Fraunces", "General Sans", ui-serif, serif;
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
   letter-spacing: -0.01em;
 }
 
