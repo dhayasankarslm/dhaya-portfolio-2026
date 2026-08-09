@@ -37,8 +37,10 @@ export default function LogoLoop({
   const dirRef = useRef(direction === "left" ? -1 : 1);
   const pausedRef = useRef(false);
 
-  speedRef.current = speed;
-  dirRef.current = direction === "left" ? -1 : 1;
+  useEffect(() => {
+    speedRef.current = speed;
+    dirRef.current = direction === "left" ? -1 : 1;
+  }, [speed, direction]);
 
   useEffect(() => {
     let raf: number;

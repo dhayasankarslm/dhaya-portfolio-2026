@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import gsap from "gsap";
 
 export default function WordCycle({
@@ -42,14 +42,18 @@ export default function WordCycle({
     }
   }, [index]);
 
+  const outgoingWord = useMemo(() => words[prevIndex.current], [words, index]);
+  const incomingWord = useMemo(() => words[index], [words, index]);
+  const longestWord = useMemo(() => words.reduce((a, b) => (a.length > b.length ? a : b)), [words]);
+
   return (
     <span className={`relative inline-block overflow-hidden align-bottom ${className}`}>
-      <span className="invisible">{words.reduce((a, b) => (a.length > b.length ? a : b))}</span>
+      <span className="invisible">{longestWord}</span>
       <span ref={outgoingRef} className="absolute inset-0" aria-hidden>
-        {words[prevIndex.current]}
+        {outgoingWord}
       </span>
       <span ref={incomingRef} className="absolute inset-0">
-        {words[index]}
+        {incomingWord}
       </span>
     </span>
   );

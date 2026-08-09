@@ -62,7 +62,8 @@ export default function GooeyPillNav({
       particle.style.height = `${size}px`;
       particle.style.left = `${cx}px`;
       particle.style.top = `${cy}px`;
-      particle.style.background = PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)];
+      const colorIndex = Math.abs(Math.sin(i * 999.0 + Date.now())) * PARTICLE_COLORS.length;
+      particle.style.background = PARTICLE_COLORS[Math.floor(colorIndex) % PARTICLE_COLORS.length];
       goop.appendChild(particle);
 
       const angle = (Math.PI * 2 * i) / particleCount + randomBetween(-0.3, 0.3);

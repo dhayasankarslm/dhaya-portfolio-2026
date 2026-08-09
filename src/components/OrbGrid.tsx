@@ -84,25 +84,25 @@ function m4Perspective(fovY: number, aspect: number, near: number, far: number):
 }
 
 function m4LookAt(eye: [number, number, number], target: [number, number, number], up: [number, number, number]): Float32Array {
-  let zx = eye[0] - target[0],
+  const zx = eye[0] - target[0],
     zy = eye[1] - target[1],
     zz = eye[2] - target[2];
-  let zl = Math.hypot(zx, zy, zz) || 1;
-  zx /= zl;
-  zy /= zl;
-  zz /= zl;
+  const zl = Math.hypot(zx, zy, zz) || 1;
+  const nx = zx / zl;
+  const ny = zy / zl;
+  const nz = zz / zl;
 
-  let xx = up[1] * zz - up[2] * zy;
-  let xy = up[2] * zx - up[0] * zz;
-  let xz = up[0] * zy - up[1] * zx;
-  let xl = Math.hypot(xx, xy, xz) || 1;
-  xx /= xl;
-  xy /= xl;
-  xz /= xl;
+  const xx = up[1] * nz - up[2] * ny;
+  const xy = up[2] * nx - up[0] * nz;
+  const xz = up[0] * ny - up[1] * nx;
+  const xl = Math.hypot(xx, xy, xz) || 1;
+  const rx = xx / xl;
+  const ry = xy / xl;
+  const rz = xz / xl;
 
-  const yx = zy * xz - zz * xy;
-  const yy = zz * xx - zx * xz;
-  const yz = zx * xy - zy * xx;
+  const yx = ny * rz - nz * ry;
+  const yy = nz * rx - nx * rz;
+  const yz = nx * ry - ny * rx;
 
   return new Float32Array([
     xx,

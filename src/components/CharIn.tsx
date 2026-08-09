@@ -1,7 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useRef, createElement, type ElementType } from "react";
+import { useEffect, useMemo, useRef, createElement, type ElementType, type ForwardedRef } from "react";
 import gsap from "gsap";
+
+interface CharInProps {
+  text: string;
+  as?: ElementType;
+  className?: string;
+  splitBy?: "words" | "chars";
+  stagger?: number;
+}
 
 export default function CharIn({
   text,
@@ -9,13 +17,7 @@ export default function CharIn({
   className = "",
   splitBy = "words",
   stagger = 0.05,
-}: {
-  text: string;
-  as?: ElementType;
-  className?: string;
-  splitBy?: "words" | "chars";
-  stagger?: number;
-}) {
+}: CharInProps) {
   const containerRef = useRef<HTMLElement>(null);
   const played = useRef(false);
 
@@ -63,5 +65,5 @@ export default function CharIn({
     return () => observer.disconnect();
   }, [text, splitBy, stagger]);
 
-  return createElement(Tag, { ref: containerRef, className }, pieces);
+  return createElement(Tag, { ref: containerRef as ForwardedRef<HTMLElement>, className }, pieces);
 }

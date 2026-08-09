@@ -41,25 +41,39 @@ export default function TextPressure({
 
   const fitToWidth = useCallback(() => {
     const wrap = wrapRef.current;
-    if (!wrap) return;
-    const w = wrap.getBoundingClientRect().width;
-    const estimate = w / (letters.length * 0.62);
-    setFontSize(Math.max(minFontSize, estimate));
-  }, [letters.length, minFontSize]);
+    const line = lineRef.current;
+    if (!wrap || !line) return;
+    const wrapWidth = wrap.getBoundingClientRect().width;
+    if (wrapWidth <= 0) return;
+
+    // measure at the current (rest-state, min-width) rendering and scale
+    // exactly to fit — avoids guessing at per-character width ratios
+    const lineWidth = line.scrollWidth || line.getBoundingClientRect().width;
+    if (lineWidth <= 0) return;
+    const currentSize = parseFloat(getComputedStyle(line).fontSize) || minFontSize;
+    const fitted = (wrapWidth / lineWidth) * currentSize * 0.98;
+    setFontSize(Math.max(minFontSize, fitted));
+  }, [minFontSize]);
 
   useEffect(() => {
-    fitToWidth();
+    const raf = requestAnimationFrame(fitToWidth);
     const onResize = () => fitToWidth();
     window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+
+    const fontsReady = (document as Document & { fonts?: FontFaceSet }).fonts?.ready;
+    fontsReady?.then(fitToWidth);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", onResize);
+    };
   }, [fitToWidth]);
 
   useEffect(() => {
-    if (wrapRef.current) {
-      const r = wrapRef.current.getBoundingClientRect();
-      pointer.current = { x: r.left + r.width / 2, y: r.top + r.height / 2 };
-      eased.current = { ...pointer.current };
-    }
+    // start the "cursor" far away so the text rests at its compact, min-width
+    // state until actually hovered — not maximally expanded (which overflows)
+    pointer.current = { x: -9999, y: -9999 };
+    eased.current = { x: -9999, y: -9999 };
 
     const onPointer = (e: PointerEvent) => {
       pointer.current.x = e.clientX;
@@ -105,7 +119,7 @@ export default function TextPressure({
     <div ref={wrapRef} className={`w-full ${className}`}>
       <div
         ref={lineRef}
-        className="flex w-full justify-between"
+        className="inline-flex flex-nowrap justify-start"
         style={{
           fontFamily: "'Roboto Flex', sans-serif",
           fontSize,

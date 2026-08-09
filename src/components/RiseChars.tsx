@@ -1,23 +1,25 @@
 "use client";
 
-import { useMemo, useRef, createElement, type ElementType } from "react";
+import { useMemo, useRef, createElement, type ElementType, type ForwardedRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+interface RiseCharsProps {
+  text: string;
+  as?: ElementType;
+  className?: string;
+  stagger?: number;
+}
+
 export default function RiseChars({
   text,
   as: Tag = "h2",
   className = "",
   stagger = 0.025,
-}: {
-  text: string;
-  as?: ElementType;
-  className?: string;
-  stagger?: number;
-}) {
+}: RiseCharsProps) {
   const containerRef = useRef<HTMLElement>(null);
 
   const chars = useMemo(
@@ -55,5 +57,5 @@ export default function RiseChars({
     { scope: containerRef, dependencies: [text] }
   );
 
-  return createElement(Tag, { ref: containerRef, className: `overflow-hidden ${className}` }, chars);
+  return createElement(Tag, { ref: containerRef as ForwardedRef<HTMLElement>, className: `overflow-hidden ${className}` }, chars);
 }

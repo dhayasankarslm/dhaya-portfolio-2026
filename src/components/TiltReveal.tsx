@@ -1,11 +1,20 @@
 "use client";
 
-import { useMemo, useRef, createElement, type ElementType } from "react";
+import { useMemo, useRef, createElement, type ElementType, type ForwardedRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
+
+interface TiltRevealProps {
+  text: string;
+  as?: ElementType;
+  className?: string;
+  startRotation?: number;
+  blur?: number;
+  dim?: number;
+}
 
 export default function TiltReveal({
   text,
@@ -14,14 +23,7 @@ export default function TiltReveal({
   startRotation = 4,
   blur = 5,
   dim = 0.12,
-}: {
-  text: string;
-  as?: ElementType;
-  className?: string;
-  startRotation?: number;
-  blur?: number;
-  dim?: number;
-}) {
+}: TiltRevealProps) {
   const containerRef = useRef<HTMLElement>(null);
 
   const words = useMemo(
@@ -65,5 +67,5 @@ export default function TiltReveal({
     { scope: containerRef, dependencies: [text] }
   );
 
-  return createElement(Tag, { ref: containerRef, className }, words);
+  return createElement(Tag, { ref: containerRef as ForwardedRef<HTMLElement>, className }, words);
 }

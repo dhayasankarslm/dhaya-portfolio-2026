@@ -37,14 +37,8 @@ export default function Footer() {
           <div className="font-display mb-3 uppercase">Contact</div>
           <div className="flex flex-col gap-2 text-background/70">
             <a href="mailto:dhayasankarinslm@gmail.com" className="hover:text-background transition-colors">Email</a>
-            <a href="https://dhayasankar.in" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">dhayasankar.in</a>
-          </div>
-        </div>
-        <div>
-          <div className="font-display mb-3 uppercase">Connect</div>
-          <div className="flex flex-col gap-2 text-background/70">
+            <a href="https://www.linkedin.com/in/dhayasankar/" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-background transition-colors">Instagram</a>
-            <a href="#" className="hover:text-background transition-colors">LinkedIn</a>
           </div>
         </div>
       </div>

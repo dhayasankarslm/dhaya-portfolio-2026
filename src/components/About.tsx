@@ -3,7 +3,6 @@ import TiltedCard from "./TiltedCard";
 import CountUp from "./CountUp";
 import CircularText from "./CircularText";
 import StickerPeel from "./StickerPeel";
-import SplitFlap from "./SplitFlap";
 import AnimatedList from "./AnimatedList";
 
 const INTERESTS = ["UI/UX", "Coding", "Art", "Music", "Travel", "Photo"];
@@ -14,10 +13,7 @@ const TEXT =
 export default function About() {
   return (
     <section id="about" className="relative border-t border-line px-6 py-24 md:px-10 md:py-32">
-      <div className="mb-8 flex items-center justify-between">
-        <span className="block text-xs uppercase tracking-[0.3em] text-muted">About</span>
-        <SplitFlap text="ZARAUTZ.NO" className="hidden text-xs uppercase tracking-[0.2em] text-muted md:block" />
-      </div>
+      <span className="mb-8 block text-xs uppercase tracking-[0.3em] text-muted">About</span>
 
       <div className="grid gap-12 md:grid-cols-[1fr_2fr_1fr]">
         <div className="relative w-full max-w-[220px]">

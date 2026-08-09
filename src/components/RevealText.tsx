@@ -1,23 +1,25 @@
 "use client";
 
-import { useRef, createElement, type ElementType } from "react";
+import { useRef, createElement, type ElementType, type ForwardedRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+interface RevealTextProps {
+  text: string;
+  as?: ElementType;
+  className?: string;
+  dim?: number;
+}
+
 export default function RevealText({
   text,
   as: Tag = "p",
   className = "",
   dim = 0.15,
-}: {
-  text: string;
-  as?: ElementType;
-  className?: string;
-  dim?: number;
-}) {
+}: RevealTextProps) {
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -40,7 +42,7 @@ export default function RevealText({
 
   return createElement(
     Tag,
-    { ref: containerRef, className },
+    { ref: containerRef as ForwardedRef<HTMLElement>, className },
     text.split(" ").map((word, i) => (
       <span key={i} className="reveal-word mr-[0.25em] inline-block" style={{ opacity: dim }}>
         {word}

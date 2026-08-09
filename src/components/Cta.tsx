@@ -19,12 +19,12 @@ export default function Cta() {
           Email me
         </a>
         <a
-          href="https://dhayasankar.in"
+          href="https://www.linkedin.com/in/dhayasankar/"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full border border-background/30 px-6 py-3 text-sm hover:border-background transition-colors"
         >
-          dhayasankar.in
+          LinkedIn
         </a>
       </div>
     </section>

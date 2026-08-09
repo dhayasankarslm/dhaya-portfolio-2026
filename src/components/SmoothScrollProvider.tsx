@@ -26,15 +26,24 @@ export default function SmoothScrollProvider({
     gsap.ticker.add(update);
     gsap.ticker.lagSmoothing(0);
 
-    const refresh = () => ScrollTrigger.refresh();
+    const refresh = () => {
+      lenis.resize();
+      ScrollTrigger.refresh();
+    };
     window.addEventListener("load", refresh);
     const fontsReady = (document as Document & { fonts?: FontFaceSet }).fonts?.ready;
     fontsReady?.then(refresh);
     const timer = setTimeout(refresh, 500);
 
+    // late-loading content (images, iframes, dynamically-sized galleries) can
+    // grow the page after Lenis's initial measurement — keep it in sync
+    const resizeObserver = new ResizeObserver(() => lenis.resize());
+    resizeObserver.observe(document.body);
+
     return () => {
       window.removeEventListener("load", refresh);
       clearTimeout(timer);
+      resizeObserver.disconnect();
       gsap.ticker.remove(update);
       lenis.destroy();
     };

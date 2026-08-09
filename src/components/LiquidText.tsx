@@ -1,9 +1,18 @@
 "use client";
 
-import { useEffect, useMemo, useRef, createElement, type ElementType } from "react";
+import { useEffect, useMemo, useRef, createElement, type ElementType, type ForwardedRef } from "react";
 
 function lerp(a: number, b: number, t: number) {
   return a + (b - a) * t;
+}
+
+interface LiquidTextProps {
+  text: string;
+  as?: ElementType;
+  className?: string;
+  radius?: number;
+  maxSkew?: number;
+  maxScale?: number;
 }
 
 export default function LiquidText({
@@ -13,14 +22,7 @@ export default function LiquidText({
   radius = 220,
   maxSkew = 14,
   maxScale = 1.35,
-}: {
-  text: string;
-  as?: ElementType;
-  className?: string;
-  radius?: number;
-  maxSkew?: number;
-  maxScale?: number;
-}) {
+}: LiquidTextProps) {
   const containerRef = useRef<HTMLElement>(null);
   const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const pointer = useRef({ x: -9999, y: -9999 });
@@ -86,5 +88,5 @@ export default function LiquidText({
     };
   }, [radius, maxSkew, maxScale, text]);
 
-  return createElement(Tag, { ref: containerRef, className }, letters);
+  return createElement(Tag, { ref: containerRef as ForwardedRef<HTMLElement>, className }, letters);
 }
