@@ -27,21 +27,27 @@ export default function LiquidText({
   const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const pointer = useRef({ x: -9999, y: -9999 });
 
-  const letters = useMemo(
-    () =>
-      text.split("").map((ch, i) => (
-        <span
-          key={i}
-          ref={(node) => {
-            letterRefs.current[i] = node;
-          }}
-          className="inline-block will-change-transform"
-        >
-          {ch === " " ? " " : ch}
-        </span>
-      )),
-    [text]
-  );
+  const letters = useMemo(() => {
+    let idx = 0;
+    return text.split(" ").map((word, wi) => (
+      <span key={wi} className="mr-[0.25em] inline-block whitespace-nowrap">
+        {word.split("").map((ch) => {
+          const i = idx++;
+          return (
+            <span
+              key={i}
+              ref={(node) => {
+                letterRefs.current[i] = node;
+              }}
+              className="inline-block will-change-transform"
+            >
+              {ch}
+            </span>
+          );
+        })}
+      </span>
+    ));
+  }, [text]);
 
   useEffect(() => {
     const el = containerRef.current;

@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -13,8 +14,14 @@ export interface BubbleItem {
 
 export default function BubbleMenu({ items }: { items: BubbleItem[] }) {
   const [open, setOpen] = useState(false);
+  const [closePos, setClosePos] = useState<{ top: number; left: number } | null>(null);
+  const CLOSE_BTN_SIZE = 44;
   const overlayRef = useRef<HTMLDivElement>(null);
   const bubblesRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useGSAP(
     () => {
@@ -54,7 +61,15 @@ export default function BubbleMenu({ items }: { items: BubbleItem[] }) {
   return (
     <>
       <button
-        onClick={() => setOpen((o) => !o)}
+        ref={triggerRef}
+        onClick={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          setClosePos({
+            top: rect.top + rect.height / 2 - CLOSE_BTN_SIZE / 2,
+            left: rect.left + rect.width / 2 - CLOSE_BTN_SIZE / 2,
+          });
+          setOpen((o) => !o);
+        }}
         className="flex items-center gap-2 text-sm"
         aria-expanded={open}
         aria-label="Toggle menu"
@@ -73,6 +88,20 @@ export default function BubbleMenu({ items }: { items: BubbleItem[] }) {
         </span>
         {open ? "Close" : "Menu"}
       </button>
+
+      {open &&
+        mounted &&
+        createPortal(
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="fixed z-50 flex h-11 w-11 items-center justify-center rounded-full border border-line bg-background/80 text-lg backdrop-blur-sm transition-colors hover:border-foreground"
+            style={closePos ? { top: closePos.top, left: closePos.left } : { top: 24, left: 24 }}
+          >
+            &times;
+          </button>,
+          document.body
+        )}
 
       <div
         ref={overlayRef}

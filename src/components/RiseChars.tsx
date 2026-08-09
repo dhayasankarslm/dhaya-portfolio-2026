@@ -24,9 +24,13 @@ export default function RiseChars({
 
   const chars = useMemo(
     () =>
-      text.split("").map((ch, i) => (
-        <span key={i} className="rise-char inline-block">
-          {ch === " " ? " " : ch}
+      text.split(" ").map((word, wi) => (
+        <span key={wi} className="mr-[0.25em] inline-block whitespace-nowrap">
+          {word.split("").map((ch, ci) => (
+            <span key={ci} className="rise-char inline-block">
+              {ch}
+            </span>
+          ))}
         </span>
       )),
     [text]

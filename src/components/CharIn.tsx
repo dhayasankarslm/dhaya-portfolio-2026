@@ -24,9 +24,13 @@ export default function CharIn({
   const pieces = useMemo(
     () =>
       splitBy === "chars"
-        ? text.split("").map((ch, i) => (
-            <span key={i} className="char-in inline-block">
-              {ch === " " ? " " : ch}
+        ? text.split(" ").map((word, wi) => (
+            <span key={wi} className="mr-[0.25em] inline-block whitespace-nowrap">
+              {word.split("").map((ch, ci) => (
+                <span key={ci} className="char-in inline-block">
+                  {ch}
+                </span>
+              ))}
             </span>
           ))
         : text.split(" ").map((word, i) => (
