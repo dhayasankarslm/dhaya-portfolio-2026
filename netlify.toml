@@ -1,20 +1,16 @@
 # Netlify Configuration for Next.js Portfolio
 [build]
   command = "npm run build"
-  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
   NPM_VERSION = "10"
 
-# Next.js 16+ uses .next as output directory by default
-# For static export, you'd use 'out' instead
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  # Single Page Application fallback - only needed if using static export
+# The official Next.js Runtime handles SSR, image optimization, and serving
+# the public/ folder correctly. Do not set `publish` or add SPA redirects
+# manually — this plugin manages the publish directory itself.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 # Cache static assets
 [[headers]]
