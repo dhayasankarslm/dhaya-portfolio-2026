@@ -1,4 +1,27 @@
-import React from 'react';
-import {ArrowUpRight,ArrowUp,DownloadSimple,EnvelopeSimple,InstagramLogo} from '@phosphor-icons/react';
-import TextPressure from '../components/TextPressure/TextPressure';
-export function PersonalFooter({email,cv,navigate}){return <footer id="contact" className="personal-footer" data-scene="contact"><div className="footer-heading"><div className="footer-copy"><p>ONE LAST THING BEFORE YOU GO</p><h2>Have a good one.<br/>Come say hi.</h2><a href={`mailto:${email}`}>{email}<ArrowUpRight/></a></div><div className="footer-portrait" aria-hidden="true"><img src="assets/images/dhaya-footer-peek.png" alt=""/></div></div><div className="footer-navigation"><div><strong>Explore</strong><a href="#work">Selected work</a><a href="#experience">Teams & clients</a><a href="#photos">Photography</a><a href="#about">About Dhaya</a></div><div><strong>Say hi</strong><a href={`mailto:${email}`}><EnvelopeSimple/>Email me</a><a href="https://www.instagram.com/__.dhayasankar.__/" target="_blank" rel="noopener noreferrer"><InstagramLogo/>Instagram</a></div><div className="footer-back"><a href={cv} download>Download my CV <DownloadSimple/></a><button onClick={()=>navigate('home')}>Back to the top <ArrowUp/></button></div></div><div className="footer-wordmark" aria-label="Dhayasankar"><TextPressure text="DHAYASANKAR" flex alpha={false} stroke={false} width weight italic radius={0.5} smoothing={0.5} idle="wave" idleSpeed={1} clickRipple={true} strokeColor="#ff0000" strokeWidth={3} minFontSize={36}/></div><div className="footer-baseline"><span>© {new Date().getFullYear()} Dhayasankar Vasudevan</span><span>Designer · Photographer · Hamburg</span></div></footer>;}
+import React from "react";
+import {ArrowUpRight,ArrowUp,DownloadSimple,EnvelopeSimple,InstagramLogo} from "@phosphor-icons/react";
+export function PersonalFooter({email,cv}){
+  return <footer id="contact" className="personal-footer yash-footer" data-scene="contact">
+    <div className="footer-stage">
+      <span className="footer-doodle flower-left" aria-hidden="true">✿</span>
+      <span className="footer-doodle flower-right" aria-hidden="true">✿</span>
+      <div className="footer-copy">
+        <p>ONE LAST THING BEFORE YOU GO</p>
+        <h2><span>Good questions</span><span>lead somewhere.</span></h2>
+        <a className="footer-talk" href={"mailto:" + email}>Let’s make something together <ArrowUpRight/></a>
+      </div>
+      <div className="footer-photo"><img src="assets/images/dhaya-footer-cutout.svg" alt="Dhaya smiling"/></div>
+      <p className="footer-caption">Me, waiting to hear what you’re making :)</p>
+      <span className="footer-signature" aria-label="Dhaya">dhaya</span>
+    </div>
+    <div className="footer-bar">
+      <span>© {new Date().getFullYear()} Dhayasankar Vasudevan</span>
+      <nav aria-label="Footer links">
+        <a href="https://www.instagram.com/__.dhayasankar.__/" target="_blank" rel="noopener noreferrer"><InstagramLogo/>Instagram</a>
+        <a href={"mailto:" + email}><EnvelopeSimple/>Email</a>
+        <a href={cv} download>Download my CV <DownloadSimple/></a>
+        <a href="#home">Back to top <ArrowUp/></a>
+      </nav>
+    </div>
+  </footer>;
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1440" role="img" aria-label="Dhaya smiling">
+  <defs>
+    <clipPath id="portrait-cutout">
+      <path d="M0 1440V1290c91-53 205-102 329-133 86-21 157-43 211-91-59-43-102-101-128-168-28-71-42-153-39-227-9-75 4-143 20-197-18-47 13-94 57-118-7-40 48-82 101-76 20-36 92-57 153-41 42-36 111-5 149-2 58 5 112 41 125 78 53 17 83 62 66 113 31 44 28 106 7 151 16 46 4 109 2 155-2 47-17 94-39 130-7 48 9 106 41 155 44 66 123 105 225 144 71 27 126 66 160 107v170Z"/>
+    </clipPath>
+  </defs>
+  <image href="portrait.jpg" width="1440" height="1440" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-cutout)"/>
+</svg>

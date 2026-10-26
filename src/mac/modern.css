@@ -92,3 +92,81 @@
 @media(max-width:700px){.modern-desktop .reference-desktop{min-height:1280px}.modern-desktop .intro-copy{top:260px;left:24px;width:calc(100% - 48px)}.modern-desktop .music-position{top:95px;left:24px;right:24px;width:auto}.modern-desktop .clock-position{top:270px;left:24px;right:auto;width:calc(50% - 32px)}.modern-desktop .calendar-position{top:270px;left:auto;right:24px;width:calc(50% - 32px)}.modern-desktop .weather-position{top:445px;left:24px;right:24px;width:auto}.modern-desktop .memories-position{top:615px;left:24px;right:24px;width:auto}.modern-desktop .memory-photo{max-height:300px;aspect-ratio:3/4}.modern-desktop .company-carousel{padding:0 36px}.modern-desktop .company-card{flex-basis:160px}.modern-desktop.scene-contact .personal-footer{min-height:100svh;padding:26px 22px 18px}.modern-desktop.scene-contact .footer-heading{min-height:46vh}.modern-desktop.scene-contact .footer-copy{padding-top:0}.modern-desktop.scene-contact .footer-portrait{right:-8vw;width:83vw;height:38vh}.modern-desktop.scene-contact .footer-navigation{grid-template-columns:1fr 1fr;gap:20px;padding:14px 0}.modern-desktop.scene-contact .footer-back{grid-column:1/-1;justify-self:stretch;align-items:flex-start!important;flex-direction:row!important}.modern-desktop.scene-contact .footer-wordmark{height:17vh}.modern-desktop.scene-contact .footer-baseline{font-size:8px;flex-wrap:wrap}}
 
 .modern-desktop .open-photos .photo-contact-sheet img{height:auto;aspect-ratio:3/4;object-fit:cover}
+
+/* Restore the earlier home composition: intro left, weather and memories below it. */
+@media(min-width:1201px){
+  .modern-desktop .intro-copy{top:135px}
+  .modern-desktop .clock-position{top:292px;right:calc(clamp(35px,6vw,86px) + 194px);width:136px}
+  .modern-desktop .weather-position{top:595px;left:54px;right:auto;width:280px}
+  .modern-desktop .memories-position{top:570px;left:380px;right:auto;width:282px}
+}
+@media(min-width:701px) and (max-width:1200px){
+  .modern-desktop .intro-copy{top:118px}
+  .modern-desktop .clock-position{top:292px;right:229px;width:136px}
+  .modern-desktop .weather-position{top:575px;left:28px;right:auto;width:245px}
+  .modern-desktop .memories-position{top:610px;left:310px;right:auto;width:250px}
+}
+.modern-desktop .memory-photo{height:auto;aspect-ratio:4/3}
+.modern-desktop .memory-photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.modern-desktop .intro-copy{top:235px}.modern-desktop .memory-photo{height:auto;aspect-ratio:4/3}}
+
+/* Keep the original four-chapter row and give every mark room to read. */
+.modern-desktop .experience-row>div{align-items:center}
+.modern-desktop .experience-icon.company-mark{width:72px;height:72px;flex:0 0 72px;padding:8px;border-radius:17px;background:rgba(255,255,255,.9);overflow:hidden}
+.modern-desktop .experience-icon.company-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.modern-desktop .experience-icon.company-mark.orange{background:#17212b}
+.modern-desktop .companies-section{overflow:hidden;padding:54px 0 74px}
+.modern-desktop .companies-marquee{position:relative;overflow:hidden;width:100vw;margin:28px 0 0 calc(50% - 50vw);padding:8px 0 16px;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.modern-desktop .companies-track{display:flex;width:max-content;animation:companies-to-the-right 46s linear infinite}
+.modern-desktop .companies-marquee:hover .companies-track,.modern-desktop .companies-marquee:focus-within .companies-track{animation-play-state:paused}
+.modern-desktop .companies-set{display:flex;align-items:center;gap:18px;padding:0 9px}
+.modern-desktop .company-marquee-item{display:flex;flex:0 0 156px;flex-direction:column;align-items:center;gap:9px;color:#234451}
+.modern-desktop .company-marquee-logo{width:100%;height:84px;display:grid;place-items:center;padding:12px;border:1px solid #ffffffc9;border-radius:20px;background:#ffffffa8;box-shadow:inset 0 1px 0 #fff,0 8px 22px #14344c15;backdrop-filter:blur(22px) saturate(150%)}
+.modern-desktop .company-marquee-item.dark .company-marquee-logo{background:#17212b}
+.modern-desktop .company-marquee-logo img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.modern-desktop .company-marquee-item strong{font-size:11px;font-weight:600;white-space:nowrap}
+@keyframes companies-to-the-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.modern-desktop .companies-track{animation:none;transform:none}}
+
+/* A warm, full-page sign-off with a hand-masked original portrait. */
+.modern-desktop.scene-contact .yash-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:0 0 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;scroll-margin-top:0;color:#171b1c;background:#fbf9f1}
+.modern-desktop.scene-contact .footer-stage{position:relative;isolation:isolate;min-height:calc(100svh - 98px);display:grid;place-items:center;overflow:hidden;padding:8vh 4vw 9vh;background-color:#faf8ef;background-image:linear-gradient(45deg,#b9ddf1 25%,transparent 25%,transparent 75%,#b9ddf1 75%),linear-gradient(45deg,#b9ddf1 25%,#faf8ef 25%,#faf8ef 75%,#b9ddf1 75%);background-position:0 0,72px 72px;background-size:144px 144px}
+.modern-desktop.scene-contact .footer-copy{position:relative;z-index:2;align-self:start;width:100%;text-align:center;padding-top:1vh}
+.modern-desktop.scene-contact .footer-copy>p{margin:0 0 22px;font-size:10px;font-weight:700;letter-spacing:1.8px;color:#35586c}
+.modern-desktop.scene-contact .footer-copy h2{display:flex;flex-direction:column;align-items:center;margin:0;font:700 clamp(58px,9.5vw,142px)/.82 Georgia,"Times New Roman",serif;letter-spacing:-.078em;color:#101416}
+.modern-desktop.scene-contact .footer-copy h2 span{white-space:nowrap}
+.modern-desktop.scene-contact .footer-talk{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:12px 19px;border:1px solid #e5c96f;border-radius:999px;background:#ffde8b;font:600 13px var(--font-ui);box-shadow:0 8px 20px #523b1c13;transition:transform .2s ease}
+.modern-desktop.scene-contact .footer-talk:hover{transform:translateY(-2px)}
+.modern-desktop.scene-contact .footer-photo{position:absolute;z-index:1;left:51%;bottom:7%;width:min(48vw,590px);height:min(52vh,470px);transform:translateX(-50%);display:flex;align-items:flex-end;justify-content:center;pointer-events:none;animation:footer-peek .75s cubic-bezier(.2,.8,.2,1) both}
+.modern-desktop.scene-contact .footer-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 18px #172a301c)}
+.modern-desktop.scene-contact .footer-caption{position:absolute;z-index:3;left:clamp(24px,14vw,210px);bottom:17%;margin:0;padding:8px 12px;border-radius:999px;background:#fffdf2cc;color:#385867;font-size:11px;transform:rotate(-3deg)}
+.modern-desktop.scene-contact .footer-signature{position:absolute;z-index:3;right:clamp(34px,13vw,190px);bottom:10%;color:#315eb4;font:500 clamp(55px,8vw,112px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
+.modern-desktop.scene-contact .footer-doodle{position:absolute;z-index:2;font-size:clamp(38px,5vw,68px);line-height:1;pointer-events:none;text-shadow:0 2px 0 #fff8}
+.modern-desktop.scene-contact .flower-left{top:18%;left:17%;color:#e9b64e;transform:rotate(-12deg)}
+.modern-desktop.scene-contact .flower-right{top:15%;right:18%;color:#d56e72;transform:rotate(12deg)}
+.modern-desktop.scene-contact .footer-bar{position:relative;z-index:2;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(20px,5vw,72px);color:#34505d;font:13px Georgia,"Times New Roman",serif}
+.modern-desktop.scene-contact .footer-bar nav{display:flex;align-items:stretch;gap:4px}
+.modern-desktop.scene-contact .footer-bar nav a{display:flex;align-items:center;gap:7px;padding:11px 15px;border:1px solid #ebd080;border-radius:12px 12px 4px 4px;background:#ffe198;color:#332d22;white-space:nowrap;transition:transform .2s ease}
+.modern-desktop.scene-contact .footer-bar nav a:hover{transform:translateY(-3px)}
+@keyframes footer-peek{from{opacity:0;transform:translate(-50%,28px)}to{opacity:1;transform:translate(-50%,0)}}
+@media(max-width:700px){
+ .modern-desktop .companies-section{padding:38px 0 54px}
+ .modern-desktop .companies-marquee{margin-top:18px}
+ .modern-desktop .company-marquee-item{flex-basis:136px}
+ .modern-desktop .company-marquee-logo{height:76px}
+ .modern-desktop .experience-icon.company-mark{width:60px;height:60px;flex-basis:60px}
+ .modern-desktop.scene-contact .yash-footer{padding-bottom:12px}
+ .modern-desktop.scene-contact .footer-stage{min-height:calc(100svh - 154px);padding:62px 14px 34px;background-size:88px 88px;background-position:0 0,44px 44px}
+ .modern-desktop.scene-contact .footer-copy>p{font-size:8px;letter-spacing:1.1px;margin-bottom:17px}
+ .modern-desktop.scene-contact .footer-copy h2{font-size:clamp(42px,11.4vw,74px);line-height:.9}
+ .modern-desktop.scene-contact .footer-talk{margin-top:19px;font-size:11px;padding:10px 13px}
+ .modern-desktop.scene-contact .footer-photo{left:50%;bottom:11%;width:88vw;height:38vh}
+ .modern-desktop.scene-contact .footer-caption{left:14px;bottom:10%;max-width:44%;font-size:9px}
+ .modern-desktop.scene-contact .footer-signature{right:18px;bottom:6%;font-size:52px}
+ .modern-desktop.scene-contact .footer-doodle{font-size:36px}
+ .modern-desktop.scene-contact .flower-left{top:15%;left:8%}
+ .modern-desktop.scene-contact .flower-right{top:14%;right:10%}
+ .modern-desktop.scene-contact .footer-bar{min-height:142px;align-items:flex-start;flex-direction:column;gap:9px;padding:12px 16px;font-size:10px}
+ .modern-desktop.scene-contact .footer-bar nav{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+ .modern-desktop.scene-contact .footer-bar nav a{justify-content:center;padding:9px 5px;font-size:10px}
+}
