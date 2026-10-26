@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.mjs",
     "check": "node --check server.mjs && node --test src/mac/companion-path.test.mjs",
-    "build": "esbuild src/mac/main.jsx --bundle --format=esm --minify --outfile=dist/main.js --jsx=automatic --external:assets/*"
+    "build": "node build.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
