@@ -137,7 +137,7 @@
 .modern-desktop.scene-contact .footer-copy h2 span{white-space:nowrap}
 .modern-desktop.scene-contact .footer-talk{display:flex;align-items:center;justify-content:flex-start;gap:10px;width:100%;margin-top:28px;padding:12px 19px;border:1px solid #e5c96f;border-radius:999px;background:#ffde8b;font:600 13px var(--font-ui);box-shadow:0 8px 20px #523b1c13;transition:transform .2s ease}
 .modern-desktop.scene-contact .footer-talk:hover{transform:translateY(-2px)}
-.modern-desktop.scene-contact .footer-photo{position:absolute;z-index:1;left:50%;bottom:-42vh;transform:translateX(-50%);width:auto;height:100vh;aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;animation:footer-peek-center .75s cubic-bezier(.2,.8,.2,1) both}
+.modern-desktop.scene-contact .footer-photo{position:absolute;z-index:1;left:50%;bottom:-23vh;transform:translateX(-50%);width:auto;height:100vh;aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;animation:footer-peek-center .75s cubic-bezier(.2,.8,.2,1) both}
 .modern-desktop.scene-contact .footer-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 18px #172a301c)}
 .modern-desktop.scene-contact .footer-caption{position:absolute;z-index:4;left:clamp(24px,7vw,100px);bottom:13%;margin:0;padding:8px 12px;border-radius:999px;background:#fffdf2cc;color:#385867;font-size:11px;transform:rotate(-3deg)}
 .modern-desktop.scene-contact .footer-signature{position:absolute;z-index:4;right:clamp(30px,8vw,125px);bottom:8%;color:#315eb4;font:500 clamp(55px,7vw,100px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
@@ -163,7 +163,7 @@
  .modern-desktop.scene-contact .footer-copy h2{font-size:clamp(40px,10vw,70px);line-height:.9;max-width:100%}
  .modern-desktop.scene-contact .footer-copy h2 span{white-space:normal}
  .modern-desktop.scene-contact .footer-talk{margin-top:19px;font-size:11px;padding:10px 13px}
- .modern-desktop.scene-contact .footer-photo{left:50%;bottom:-25vh;height:78vh}
+ .modern-desktop.scene-contact .footer-photo{left:50%;bottom:-14vh;height:78vh}
  .modern-desktop.scene-contact .footer-caption{left:14px;bottom:9%;max-width:42%;font-size:9px}
  .modern-desktop.scene-contact .footer-signature{right:15px;bottom:5%;font-size:clamp(42px,12vw,58px)}
  .modern-desktop.scene-contact .footer-doodle{font-size:36px}
