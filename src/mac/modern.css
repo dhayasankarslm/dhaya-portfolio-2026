@@ -128,27 +128,28 @@
 @keyframes companies-to-the-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){.modern-desktop .companies-track{animation:none;transform:none}}
 
-/* Checkerboard sign-off inspired by the reference; photo cutout stays clear of the copy. */
+/* Reference footer composition: centered two-line type, portrait peeking through, full-width contact card. */
 .modern-desktop.scene-contact .yash-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:0 0 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;scroll-margin-top:0;color:#171b1c;background:#fbf9f1}
 .modern-desktop.scene-contact .footer-stage{position:relative;isolation:isolate;min-height:calc(100svh - 98px);display:flex;align-items:center;overflow:hidden;padding:7vh 6vw 8vh;background-color:#faf8ef;background-image:linear-gradient(45deg,#b9ddf1 25%,transparent 25%,transparent 75%,#b9ddf1 75%),linear-gradient(45deg,#b9ddf1 25%,#faf8ef 25%,#faf8ef 75%,#b9ddf1 75%);background-position:0 0,72px 72px;background-size:144px 144px}
-.modern-desktop.scene-contact .footer-copy{position:relative;z-index:2;align-self:center;width:min(57%,820px);text-align:left;padding:0 0 3vh 1vw}
+.modern-desktop.scene-contact .footer-copy{position:absolute;z-index:3;top:9%;left:0;width:100%;text-align:center;padding:0 clamp(20px,5.3vw,82px)}
 .modern-desktop.scene-contact .footer-copy>p{margin:0 0 22px;font-size:10px;font-weight:700;letter-spacing:1.8px;color:#35586c}
-.modern-desktop.scene-contact .footer-copy h2{display:flex;flex-direction:column;align-items:flex-start;max-width:100%;margin:0;font:700 clamp(50px,6.4vw,100px)/.9 Georgia,"Times New Roman",serif;letter-spacing:-.078em;color:#101416}
+.modern-desktop.scene-contact .footer-copy h2{display:flex;flex-direction:column;align-items:center;width:100%;max-width:none;margin:0;font:700 clamp(58px,9.3vw,148px)/.82 Georgia,"Times New Roman",serif;letter-spacing:-.078em;color:#101416}
 .modern-desktop.scene-contact .footer-copy h2 span{white-space:nowrap}
-.modern-desktop.scene-contact .footer-talk{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:12px 19px;border:1px solid #e5c96f;border-radius:999px;background:#ffde8b;font:600 13px var(--font-ui);box-shadow:0 8px 20px #523b1c13;transition:transform .2s ease}
+.modern-desktop.scene-contact .footer-talk{display:flex;align-items:center;justify-content:flex-start;gap:10px;width:100%;margin-top:28px;padding:12px 19px;border:1px solid #e5c96f;border-radius:999px;background:#ffde8b;font:600 13px var(--font-ui);box-shadow:0 8px 20px #523b1c13;transition:transform .2s ease}
 .modern-desktop.scene-contact .footer-talk:hover{transform:translateY(-2px)}
-.modern-desktop.scene-contact .footer-photo{position:absolute;z-index:1;right:clamp(8px,2vw,32px);bottom:0;width:auto;height:min(69vh,560px);aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;animation:footer-peek-right .75s cubic-bezier(.2,.8,.2,1) both}
+.modern-desktop.scene-contact .footer-photo{position:absolute;z-index:1;left:50%;bottom:-42vh;transform:translateX(-50%);width:auto;height:100vh;aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;animation:footer-peek-center .75s cubic-bezier(.2,.8,.2,1) both}
 .modern-desktop.scene-contact .footer-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 18px #172a301c)}
-.modern-desktop.scene-contact .footer-caption{position:absolute;z-index:3;left:clamp(24px,7vw,100px);bottom:13%;margin:0;padding:8px 12px;border-radius:999px;background:#fffdf2cc;color:#385867;font-size:11px;transform:rotate(-3deg)}
-.modern-desktop.scene-contact .footer-signature{position:absolute;z-index:3;right:clamp(30px,8vw,125px);bottom:8%;color:#315eb4;font:500 clamp(55px,7vw,100px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
+.modern-desktop.scene-contact .footer-caption{position:absolute;z-index:4;left:clamp(24px,7vw,100px);bottom:13%;margin:0;padding:8px 12px;border-radius:999px;background:#fffdf2cc;color:#385867;font-size:11px;transform:rotate(-3deg)}
+.modern-desktop.scene-contact .footer-signature{position:absolute;z-index:4;right:clamp(30px,8vw,125px);bottom:8%;color:#315eb4;font:500 clamp(55px,7vw,100px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
 .modern-desktop.scene-contact .footer-doodle{position:absolute;z-index:2;font-size:clamp(38px,5vw,68px);line-height:1;pointer-events:none;text-shadow:0 2px 0 #fff8}
-.modern-desktop.scene-contact .flower-left{top:19%;left:48%;color:#e9b64e;transform:rotate(-12deg)}
-.modern-desktop.scene-contact .flower-right{top:16%;right:11%;color:#d56e72;transform:rotate(12deg)}
+.modern-desktop.scene-contact .flower-left{top:19%;left:18%;color:#e9b64e;transform:rotate(-12deg)}
+.modern-desktop.scene-contact .flower-right{top:16%;right:18%;color:#d56e72;transform:rotate(12deg)}
 .modern-desktop.scene-contact .footer-bar{position:relative;z-index:2;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(20px,5vw,72px);color:#34505d;font:13px Georgia,"Times New Roman",serif}
 .modern-desktop.scene-contact .footer-bar nav{display:flex;align-items:stretch;gap:4px}
 .modern-desktop.scene-contact .footer-bar nav a{display:flex;align-items:center;gap:7px;padding:11px 15px;border:1px solid #ebd080;border-radius:12px 12px 4px 4px;background:#ffe198;color:#332d22;white-space:nowrap;transition:transform .2s ease}
 .modern-desktop.scene-contact .footer-bar nav a:hover{transform:translateY(-3px)}
 @keyframes footer-peek-right{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes footer-peek-center{from{opacity:0;transform:translate(-50%,28px)}to{opacity:1;transform:translate(-50%,0)}}
 @media(max-width:700px){
  .modern-desktop .companies-section{padding:38px 0 54px}
  .modern-desktop .companies-marquee{margin-top:18px}
@@ -156,18 +157,18 @@
  .modern-desktop .company-marquee-logo{height:76px}
  .modern-desktop .experience-icon.company-mark{width:60px;height:60px;flex-basis:60px}
  .modern-desktop.scene-contact .yash-footer{padding-bottom:12px}
- .modern-desktop.scene-contact .footer-stage{min-height:calc(100svh - 154px);align-items:flex-start;padding:48px 18px 34px;background-size:88px 88px;background-position:0 0,44px 44px}
- .modern-desktop.scene-contact .footer-copy{width:100%;padding:0;}
+ .modern-desktop.scene-contact .footer-stage{min-height:calc(100svh - 154px);align-items:flex-start;padding:36px 18px 34px;background-size:88px 88px;background-position:0 0,44px 44px}
+ .modern-desktop.scene-contact .footer-copy{top:8%;width:100%;padding:0;}
  .modern-desktop.scene-contact .footer-copy>p{font-size:8px;letter-spacing:1.1px;margin-bottom:17px}
- .modern-desktop.scene-contact .footer-copy h2{font-size:clamp(40px,10vw,70px);line-height:.9;max-width:90%}
+ .modern-desktop.scene-contact .footer-copy h2{font-size:clamp(40px,10vw,70px);line-height:.9;max-width:100%}
  .modern-desktop.scene-contact .footer-copy h2 span{white-space:normal}
  .modern-desktop.scene-contact .footer-talk{margin-top:19px;font-size:11px;padding:10px 13px}
- .modern-desktop.scene-contact .footer-photo{right:-2vw;bottom:0;height:min(45vh,360px)}
+ .modern-desktop.scene-contact .footer-photo{left:50%;bottom:-25vh;height:78vh}
  .modern-desktop.scene-contact .footer-caption{left:14px;bottom:9%;max-width:42%;font-size:9px}
  .modern-desktop.scene-contact .footer-signature{right:15px;bottom:5%;font-size:clamp(42px,12vw,58px)}
  .modern-desktop.scene-contact .footer-doodle{font-size:36px}
- .modern-desktop.scene-contact .flower-left{top:12%;left:74%}
- .modern-desktop.scene-contact .flower-right{top:22%;right:6%}
+ .modern-desktop.scene-contact .flower-left{top:12%;left:7%}
+ .modern-desktop.scene-contact .flower-right{top:22%;right:7%}
  .modern-desktop.scene-contact .footer-bar{min-height:142px;align-items:flex-start;flex-direction:column;gap:9px;padding:12px 16px;font-size:10px}
  .modern-desktop.scene-contact .footer-bar nav{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
  .modern-desktop.scene-contact .footer-bar nav a{justify-content:center;padding:9px 5px;font-size:10px}
