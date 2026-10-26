@@ -1,0 +1,37 @@
+[
+  {
+    "title": "I Want to Break Free",
+    "artist": "Queen",
+    "id": "3SfwhRb2CzGGuyUYF64wYR",
+    "url": "https://open.spotify.com/track/3SfwhRb2CzGGuyUYF64wYR?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=23eb48e8-d3ae-4b00-b3f8-0cea2fe6733d",
+    "cover": "https://i.scdn.co/image/ab67616d00001e020b6e29757c37fb90e4587f65"
+  },
+  {
+    "title": "Somebody To Love",
+    "artist": "Queen",
+    "id": "18OMrZoyyZuVy06FttIFhq",
+    "url": "https://open.spotify.com/track/18OMrZoyyZuVy06FttIFhq?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=1ece2e71-46d0-4fc1-844b-3cb1022a2b46",
+    "cover": "https://i.scdn.co/image/ab67616d00001e023aa2d125c28475c322ac831e"
+  },
+  {
+    "title": "Lover, You Should've Come Over",
+    "artist": "Jeff Buckley",
+    "id": "6Jv7kjGkhY2fT4yuBF3aTz",
+    "url": "https://open.spotify.com/track/6Jv7kjGkhY2fT4yuBF3aTz?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=b3add2a6-db72-42ce-a943-807f07e63817",
+    "cover": "https://i.scdn.co/image/ab67616d00001e02afc2d1d2c8703a10aeded0af"
+  },
+  {
+    "title": "Fake Plastic Trees",
+    "artist": "Radiohead",
+    "id": "73CKjW3vsUXRpy3NnX4H7F",
+    "url": "https://open.spotify.com/track/73CKjW3vsUXRpy3NnX4H7F?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=47c9b458-7e98-4b95-af8d-f4433d8055da",
+    "cover": "https://i.scdn.co/image/ab67616d00001e029293c743fa542094336c5e12"
+  },
+  {
+    "title": "If I Ain't Got You",
+    "artist": "Alicia Keys",
+    "id": "3XVBdLihbNbxUwZosxcGuJ",
+    "url": "https://open.spotify.com/track/3XVBdLihbNbxUwZosxcGuJ?utm_source=openai&utm_medium=chatgpt&go=1&nap_web=1&request_id=1979b6c9-822c-4fbb-a180-53646d4a4ad1",
+    "cover": "https://i.scdn.co/image/ab67616d00001e0256ff19308ebeb48e2ba6094b"
+  }
+]

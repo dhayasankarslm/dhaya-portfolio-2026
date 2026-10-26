@@ -1,32 +1,21 @@
 {
-  "name": "portfolio-site",
-  "version": "0.1.0",
+  "name": "dhaya-portfolio",
   "private": true,
+  "version": "0.1.0",
+  "description": "Dhaya portfolio with glass desktop tools, React Bits folders, photography and an original vector companion.",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "node server.mjs",
+    "check": "node --check server.mjs && node --test src/mac/companion-path.test.mjs",
+    "build": "esbuild src/mac/main.jsx --bundle --format=esm --minify --outfile=dist/main.js --jsx=automatic --external:assets/*"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@react-three/drei": "^10.7.8",
-    "@react-three/fiber": "^9.7.0",
+    "@phosphor-icons/react": "^2.1.10",
     "gsap": "^3.15.0",
-    "lenis": "^1.3.26",
-    "next": "16.3.0",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "three": "^0.185.1"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.3.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "esbuild": "^0.28.2"
   }
 }

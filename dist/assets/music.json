@@ -1,0 +1,52 @@
+[
+  {
+    "title": "I Want To Break Free",
+    "artist": "Queen",
+    "album": "The Works (Deluxe Edition)",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/83/7b/34/837b3417-e98c-cb99-789b-6e02591ac7d3/mzaf_2580454238131929737.plus.aac.p.m4a",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/34/38/5c/34385cb8-81bf-5c7f-993d-103bcf4a7cfa/602527717661.jpg/300x300bb.jpg",
+    "storeUrl": "https://music.apple.com/de/album/i-want-to-break-free/6781461206?i=6781461224&uo=4",
+    "id": 6781461224,
+    "previewOnly": true
+  },
+  {
+    "title": "Somebody To Love",
+    "artist": "Queen",
+    "album": "The Platinum Collection",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/f3/d9/45f3d963-141e-4487-73ea-fae9944d2bbb/mzaf_7563210542396678292.plus.aac.p.m4a",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/15/c7/55/15c755bc-7603-3ce3-e243-e59f1f9863ea/602527724171.jpg/300x300bb.jpg",
+    "storeUrl": "https://music.apple.com/de/album/somebody-to-love/6781080933?i=6781080944&uo=4",
+    "id": 6781080944,
+    "previewOnly": true
+  },
+  {
+    "title": "Lover, You Should've Come Over",
+    "artist": "Jeff Buckley",
+    "album": "Grace",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/0c/4e/db0c4edc-9daa-e262-55b9-89984c3f6aa6/mzaf_16142695276315265640.plus.aac.p.m4a",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/26/d6/e3/26d6e339-a7a9-d61e-1b5f-0852a5515a55/886445517880.jpg/300x300bb.jpg",
+    "storeUrl": "https://music.apple.com/de/album/lover-you-shouldve-come-over/1046187510?i=1046187589&uo=4",
+    "id": 1046187589,
+    "previewOnly": true
+  },
+  {
+    "title": "Fake Plastic Trees",
+    "artist": "Radiohead",
+    "album": "The Bends",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/c2/e6/a8c2e649-2a9d-8c7c-060b-7aced7644752/mzaf_7424058486766692978.plus.aac.p.m4a",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1b/a9/5c/1ba95cac-b245-d386-63fb-6b857aa9dce8/634904078065.png/300x300bb.jpg",
+    "storeUrl": "https://music.apple.com/de/album/fake-plastic-trees/1097862703?i=1097862845&uo=4",
+    "id": 1097862845,
+    "previewOnly": true
+  },
+  {
+    "title": "If I Ain't Got You",
+    "artist": "Alicia Keys",
+    "album": "The Diary Of Alicia Keys 20",
+    "preview": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/50/54/1f/50541f15-4687-b5a1-09fd-dced46fb8dec/mzaf_7708258408013670251.plus.aac.p.m4a",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7d/a3/2d/7da32df5-bec0-99fa-1431-5df4d6fd930a/196871575188.jpg/300x300bb.jpg",
+    "storeUrl": "https://music.apple.com/de/album/if-i-aint-got-you/1714012273?i=1714012402&uo=4",
+    "id": 1714012402,
+    "previewOnly": true
+  }
+]
