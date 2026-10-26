@@ -218,3 +218,4 @@
 .modern-desktop .footer-copy h2{font-size:clamp(80px,12vw,160px);line-height:.96}
 @media(max-width:700px){.modern-desktop .yash-footer{margin-left:-62px}.modern-desktop .footer-copy h2{font-size:clamp(58px,12vw,100px);line-height:.9}}
 @media(max-width:370px){.modern-desktop .yash-footer{margin-left:-58px}}
+.modern-desktop.scene-contact .margin-companion{display:none!important}
