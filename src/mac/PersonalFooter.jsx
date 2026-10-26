@@ -10,7 +10,7 @@ export function PersonalFooter({email,cv}){
         <h2><span>Good questions</span><span>lead somewhere.</span></h2>
         <a className="footer-talk" href={"mailto:" + email}>Let’s make something together <ArrowUpRight/></a>
       </div>
-      <div className="footer-photo"><img src="assets/images/dhaya-footer-cutout.svg" alt="Dhaya smiling"/></div>
+      <div className="footer-photo"><img src="assets/images/portrait.jpg" alt="Dhaya smiling"/></div>
       <p className="footer-caption">Me, waiting to hear what you’re making :)</p>
       <span className="footer-signature" aria-label="Dhaya">dhaya</span>
     </div>
