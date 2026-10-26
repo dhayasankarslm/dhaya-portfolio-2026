@@ -18,5 +18,5 @@ await build({
 const indexPath = 'dist/index.html';
 const index = await readFile(indexPath, 'utf8');
 await writeFile(indexPath, index
-  .replace('href="main.css"', `href="main.css?v=${revision}"`)
-  .replace('src="main.js"', `src="main.js?v=${revision}"`));
+  .replace(/href="main\.css(?:\?v=[^"]*)?"/, `href="main.css?v=${revision}"`)
+  .replace(/src="main\.js(?:\?v=[^"]*)?"/, `src="main.js?v=${revision}"`));
