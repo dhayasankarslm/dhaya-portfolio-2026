@@ -10,3 +10,38 @@
 
 .modern-desktop{padding-top:48px}.modern-menubar{position:fixed;top:0;left:0;right:0}.toon-arm{transform-origin:100px 185px}.toon-leg{transition:transform .08s linear}.emotion-surprised .toon-arm.left{transform:rotate(12deg)}@media(max-width:699px){.modern-desktop{padding-top:44px}}
 [data-theme=night] .modern-desktop .app-window{color:var(--modern-ink)}[data-theme=night] .control-slider>span,[data-theme=night] .control-grid strong,[data-theme=night] .world-clock time,[data-theme=night] .world-clock strong{color:#eef5f4}[data-theme=night] .spotlight{background:#243d51e8;color:#eef5f4;border-color:#ffffff55}[data-theme=night] .spotlight-input input{color:#edf4f6}[data-theme=night] .spotlight-results>button.selected{background:#ffffff1f}[data-theme=night] .spotlight-results small,[data-theme=night] .spotlight>footer{color:#bed3df}
+[data-theme="day"] .seamless-portfolio.modern-desktop{position:relative;isolation:isolate;background:transparent;color:#102b3c}
+.modern-desktop .content-lane{position:relative;z-index:1}
+.modern-desktop .desktop-ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#9cc9df}
+.modern-desktop .desktop-ambient img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:brightness(var(--scene-brightness,1)) saturate(1.03)}
+.modern-desktop .desktop-ambient:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#f4f9f91c 0%,#f2f8f71a 52%,#12364d24 100%);pointer-events:none}
+.modern-desktop .reference-desktop,.modern-desktop .open-photos,.modern-desktop .experience-section,.modern-desktop .open-about,.modern-desktop .project-browser{background:transparent!important}
+.modern-desktop .reference-desktop{isolation:unset}
+.modern-desktop .open-photos{border-top:0}
+.modern-desktop .clock-position,.modern-desktop .calendar-position,.modern-desktop .music-position{top:68px}
+.modern-desktop .intro-copy{top:128px}
+.modern-desktop .desktop-widget .ceramic-widget,.modern-desktop .music-position,.modern-desktop .modern-menubar,.modern-desktop .modern-dock,.modern-desktop .glass-action,.modern-desktop .mac-window,.modern-desktop .app-window{background:rgba(247,250,252,.63);border:1px solid rgba(255,255,255,.78);backdrop-filter:blur(28px) saturate(175%);-webkit-backdrop-filter:blur(28px) saturate(175%);box-shadow:0 18px 42px -25px rgba(5,35,54,.42),0 4px 14px rgba(18,47,67,.1),inset 0 1px 0 rgba(255,255,255,.9)}
+.modern-desktop .glass-action{color:#123449}
+.modern-desktop .desktop-widget .ceramic-widget{color:#123449}
+.modern-desktop .photo-contact-sheet{grid-template-columns:repeat(auto-fill,minmax(155px,1fr));align-items:start;gap:24px 18px}
+.modern-desktop .photo-contact-sheet img{display:block;width:100%;height:auto!important;aspect-ratio:3/4;object-fit:cover;border-radius:14px;box-shadow:0 12px 28px rgba(13,43,59,.16)}
+.modern-desktop .reactbits-photos .circular-gallery{height:600px}
+.modern-desktop .personal-footer{max-width:1200px;padding:100px 0 28px;margin:0 auto;color:#09283b;scroll-margin-top:50px}
+.modern-desktop .footer-heading{position:relative;z-index:1;padding:0 clamp(22px,5vw,70px);display:grid;grid-template-columns:1fr auto;align-items:end;gap:10px 28px}
+.modern-desktop .footer-heading>p{grid-column:1/-1;margin:0 0 18px;font-size:10px;letter-spacing:1.7px;font-weight:650;color:#164660}
+.modern-desktop .footer-heading h2{grid-row:span 2;margin:0;font-size:clamp(44px,7vw,88px);line-height:.98;letter-spacing:-.065em;color:#082a3d}
+.modern-desktop .footer-heading>a:not(.footer-cv){display:flex;align-items:center;gap:10px;font-size:clamp(15px,2vw,22px);font-weight:650}
+.modern-desktop .footer-cv{grid-column:2;display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#24536a;border-bottom:1px solid currentColor;padding-bottom:4px;width:max-content}
+.modern-desktop .footer-illustration{position:relative;z-index:1;line-height:0;margin:26px -2vw -12px;overflow:hidden}
+.modern-desktop .footer-illustration img{display:block;width:100%;height:auto;max-height:390px;object-fit:contain;object-position:center bottom}
+.modern-desktop .footer-navigation{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;padding:28px clamp(22px,5vw,70px);border-top:1px solid #0d38512e;border-bottom:1px solid #0d38512e;background:rgba(241,248,250,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.modern-desktop .footer-navigation>div{display:flex;flex-direction:column;align-items:flex-start;gap:9px;font-size:12px;color:#15394c}
+.modern-desktop .footer-navigation strong{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:5px;color:#477082}
+.modern-desktop .footer-navigation a{display:flex;align-items:center;gap:7px}
+.modern-desktop .footer-back{justify-self:end;align-items:flex-end!important;justify-content:space-between}
+.modern-desktop .footer-back button{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:650}
+.modern-desktop .footer-back span{font-size:10px;color:#477082}
+.modern-desktop .footer-wordmark{font:850 clamp(64px,14.2vw,190px)/.88 var(--font-display);letter-spacing:-.09em;color:#092a3d;text-align:center;white-space:nowrap;overflow:hidden;padding:22px 0 12px}
+.modern-desktop .footer-baseline{display:flex;justify-content:space-between;gap:15px;padding:15px clamp(22px,5vw,70px) 0;font-size:10px;color:#365d6e}
+@media(max-width:700px){.modern-desktop .clock-position,.modern-desktop .calendar-position,.modern-desktop .music-position{top:55px}.modern-desktop .intro-copy{top:325px}.modern-desktop .desktop-ambient img{object-position:55% center}.modern-desktop .photo-contact-sheet{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 13px}.modern-desktop .personal-footer{padding:62px 0 24px}.modern-desktop .footer-heading{grid-template-columns:1fr;gap:12px}.modern-desktop .footer-heading>p{margin-bottom:6px}.modern-desktop .footer-heading h2{grid-row:auto;font-size:clamp(42px,12vw,64px);margin-bottom:5px}.modern-desktop .footer-cv{grid-column:1}.modern-desktop .footer-illustration{margin:20px -7vw -3px}.modern-desktop .footer-illustration img{width:120%;max-width:none;margin-left:-10%;max-height:260px}.modern-desktop .footer-navigation{grid-template-columns:1fr 1fr;gap:22px;padding:22px}.modern-desktop .footer-back{grid-column:1/-1;justify-self:stretch;align-items:flex-start!important;gap:12px}.modern-desktop .footer-wordmark{font-size:15vw;padding:24px 0 14px}.modern-desktop .footer-baseline{padding:14px 22px 0;font-size:8px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.modern-desktop .desktop-ambient img{transform:none}}
