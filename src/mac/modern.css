@@ -212,3 +212,9 @@
  .modern-desktop .footer-copyright{grid-column:1;grid-row:1;font-size:9px}
  .modern-desktop .footer-top{grid-column:2;grid-row:1;padding:8px 9px;font-size:9px}
 }
+
+/* Final alignment pass against the Yash footer reference. */
+.modern-desktop .yash-footer{margin-left:-104px}
+.modern-desktop .footer-copy h2{font-size:clamp(80px,12vw,160px);line-height:.96}
+@media(max-width:700px){.modern-desktop .yash-footer{margin-left:-62px}.modern-desktop .footer-copy h2{font-size:clamp(58px,12vw,100px);line-height:.9}}
+@media(max-width:370px){.modern-desktop .yash-footer{margin-left:-58px}}
