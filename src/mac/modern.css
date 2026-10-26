@@ -71,25 +71,25 @@
 .modern-desktop .company-card strong{font-size:12px;font-weight:600;padding:0 3px 3px}
 .modern-desktop .company-arrow{position:absolute;z-index:2;top:58px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.8);background:rgba(255,255,255,.72);box-shadow:0 5px 16px rgba(20,38,58,.12);backdrop-filter:blur(16px)}
 .modern-desktop .company-arrow.previous{left:0}.modern-desktop .company-arrow.next{right:0}
-.modern-desktop.scene-contact .modern-menubar,.modern-desktop.scene-contact .modern-dock,.modern-desktop.scene-contact .floating-music,.modern-desktop.scene-contact .margin-companion,.modern-desktop.scene-contact .guide-margin{opacity:0;pointer-events:none;transition:opacity .28s ease}
-.modern-desktop.scene-contact .personal-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:clamp(26px,5vh,64px) clamp(24px,5vw,74px) 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;scroll-margin-top:0;color:var(--modern-ink);background:rgba(250,249,246,.3)}
-.modern-desktop.scene-contact .footer-heading{position:relative;display:flex;justify-content:space-between;align-items:flex-start;min-height:38vh;padding:0;overflow:visible}
-.modern-desktop.scene-contact .footer-copy{position:relative;z-index:2;padding-top:3vh}
-.modern-desktop.scene-contact .footer-copy>p{margin:0 0 18px;font-size:10px;letter-spacing:1.7px;font-weight:650}
-.modern-desktop.scene-contact .footer-copy h2{margin:0 0 22px;font-size:clamp(43px,6.5vw,82px);line-height:.98;letter-spacing:-.065em}
-.modern-desktop.scene-contact .footer-copy>a{display:flex;align-items:center;gap:10px;font-size:clamp(15px,2vw,22px);font-weight:650}
-.modern-desktop.scene-contact .footer-portrait{position:absolute;right:2vw;bottom:-1px;width:min(48vw,670px);height:48vh;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
-.modern-desktop.scene-contact .footer-portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 22px rgba(28,33,40,.12))}
-.modern-desktop.scene-contact .footer-navigation{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;margin:0;padding:20px 0;border-top:1px solid rgba(23,47,62,.24);border-bottom:1px solid rgba(23,47,62,.24);background:transparent;backdrop-filter:none}
-.modern-desktop.scene-contact .footer-navigation>div{display:flex;flex-direction:column;align-items:flex-start;gap:9px;font-size:12px}
-.modern-desktop.scene-contact .footer-navigation strong{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:4px}
-.modern-desktop.scene-contact .footer-navigation a,.modern-desktop.scene-contact .footer-back button{display:flex;align-items:center;gap:7px;font-size:12px}
-.modern-desktop.scene-contact .footer-back{justify-self:end;align-items:flex-end!important;justify-content:space-between}
-.modern-desktop.scene-contact .footer-wordmark{width:100%;height:clamp(120px,22vh,240px);padding:0;overflow:hidden;color:#102f41}
-.modern-desktop.scene-contact .footer-wordmark>div{height:100%!important;width:100%!important}
-.modern-desktop.scene-contact .footer-wordmark .text-pressure-title{height:100%;display:flex;align-items:flex-end;padding-bottom:2px;color:inherit;font-size:clamp(64px,14vw,190px)!important}
-.modern-desktop.scene-contact .footer-baseline{display:flex;justify-content:space-between;gap:15px;padding:0;font-size:10px}
-@media(max-width:700px){.modern-desktop .reference-desktop{min-height:1280px}.modern-desktop .intro-copy{top:260px;left:24px;width:calc(100% - 48px)}.modern-desktop .music-position{top:95px;left:24px;right:24px;width:auto}.modern-desktop .clock-position{top:270px;left:24px;right:auto;width:calc(50% - 32px)}.modern-desktop .calendar-position{top:270px;left:auto;right:24px;width:calc(50% - 32px)}.modern-desktop .weather-position{top:445px;left:24px;right:24px;width:auto}.modern-desktop .memories-position{top:615px;left:24px;right:24px;width:auto}.modern-desktop .memory-photo{max-height:300px;aspect-ratio:3/4}.modern-desktop .company-carousel{padding:0 36px}.modern-desktop .company-card{flex-basis:160px}.modern-desktop.scene-contact .personal-footer{min-height:100svh;padding:26px 22px 18px}.modern-desktop.scene-contact .footer-heading{min-height:46vh}.modern-desktop.scene-contact .footer-copy{padding-top:0}.modern-desktop.scene-contact .footer-portrait{right:-8vw;width:83vw;height:38vh}.modern-desktop.scene-contact .footer-navigation{grid-template-columns:1fr 1fr;gap:20px;padding:14px 0}.modern-desktop.scene-contact .footer-back{grid-column:1/-1;justify-self:stretch;align-items:flex-start!important;flex-direction:row!important}.modern-desktop.scene-contact .footer-wordmark{height:17vh}.modern-desktop.scene-contact .footer-baseline{font-size:8px;flex-wrap:wrap}}
+.modern-desktop .modern-menubar,.modern-desktop .modern-dock,.modern-desktop .floating-music,.modern-desktop .margin-companion,.modern-desktop .guide-margin{opacity:0;pointer-events:none;transition:opacity .28s ease}
+.modern-desktop .personal-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:clamp(26px,5vh,64px) clamp(24px,5vw,74px) 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;scroll-margin-top:0;color:var(--modern-ink);background:rgba(250,249,246,.3)}
+.modern-desktop .footer-heading{position:relative;display:flex;justify-content:space-between;align-items:flex-start;min-height:38vh;padding:0;overflow:visible}
+.modern-desktop .footer-copy{position:relative;z-index:2;padding-top:3vh}
+.modern-desktop .footer-copy>p{margin:0 0 18px;font-size:10px;letter-spacing:1.7px;font-weight:650}
+.modern-desktop .footer-copy h2{margin:0 0 22px;font-size:clamp(43px,6.5vw,82px);line-height:.98;letter-spacing:-.065em}
+.modern-desktop .footer-copy>a{display:flex;align-items:center;gap:10px;font-size:clamp(15px,2vw,22px);font-weight:650}
+.modern-desktop .footer-portrait{position:absolute;right:2vw;bottom:-1px;width:min(48vw,670px);height:48vh;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
+.modern-desktop .footer-portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 22px rgba(28,33,40,.12))}
+.modern-desktop .footer-navigation{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;margin:0;padding:20px 0;border-top:1px solid rgba(23,47,62,.24);border-bottom:1px solid rgba(23,47,62,.24);background:transparent;backdrop-filter:none}
+.modern-desktop .footer-navigation>div{display:flex;flex-direction:column;align-items:flex-start;gap:9px;font-size:12px}
+.modern-desktop .footer-navigation strong{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;margin-bottom:4px}
+.modern-desktop .footer-navigation a,.modern-desktop .footer-back button{display:flex;align-items:center;gap:7px;font-size:12px}
+.modern-desktop .footer-back{justify-self:end;align-items:flex-end!important;justify-content:space-between}
+.modern-desktop .footer-wordmark{width:100%;height:clamp(120px,22vh,240px);padding:0;overflow:hidden;color:#102f41}
+.modern-desktop .footer-wordmark>div{height:100%!important;width:100%!important}
+.modern-desktop .footer-wordmark .text-pressure-title{height:100%;display:flex;align-items:flex-end;padding-bottom:2px;color:inherit;font-size:clamp(64px,14vw,190px)!important}
+.modern-desktop .footer-baseline{display:flex;justify-content:space-between;gap:15px;padding:0;font-size:10px}
+@media(max-width:700px){.modern-desktop .reference-desktop{min-height:1280px}.modern-desktop .intro-copy{top:260px;left:24px;width:calc(100% - 48px)}.modern-desktop .music-position{top:95px;left:24px;right:24px;width:auto}.modern-desktop .clock-position{top:270px;left:24px;right:auto;width:calc(50% - 32px)}.modern-desktop .calendar-position{top:270px;left:auto;right:24px;width:calc(50% - 32px)}.modern-desktop .weather-position{top:445px;left:24px;right:24px;width:auto}.modern-desktop .memories-position{top:615px;left:24px;right:24px;width:auto}.modern-desktop .memory-photo{max-height:300px;aspect-ratio:3/4}.modern-desktop .company-carousel{padding:0 36px}.modern-desktop .company-card{flex-basis:160px}.modern-desktop .personal-footer{min-height:100svh;padding:26px 22px 18px}.modern-desktop .footer-heading{min-height:46vh}.modern-desktop .footer-copy{padding-top:0}.modern-desktop .footer-portrait{right:-8vw;width:83vw;height:38vh}.modern-desktop .footer-navigation{grid-template-columns:1fr 1fr;gap:20px;padding:14px 0}.modern-desktop .footer-back{grid-column:1/-1;justify-self:stretch;align-items:flex-start!important;flex-direction:row!important}.modern-desktop .footer-wordmark{height:17vh}.modern-desktop .footer-baseline{font-size:8px;flex-wrap:wrap}}
 
 .modern-desktop .open-photos .photo-contact-sheet img{height:auto;aspect-ratio:3/4;object-fit:cover}
 
@@ -129,25 +129,25 @@
 @media(prefers-reduced-motion:reduce){.modern-desktop .companies-track{animation:none;transform:none}}
 
 /* Reference footer composition: centered two-line type, portrait peeking through, full-width contact card. */
-.modern-desktop.scene-contact .yash-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:0 0 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;scroll-margin-top:0;color:#171b1c;background:#fbf9f1}
-.modern-desktop.scene-contact .footer-stage{position:relative;isolation:isolate;min-height:calc(100svh - 98px);display:flex;align-items:center;overflow:hidden;padding:7vh 6vw 8vh;background-color:#faf8ef;background-image:linear-gradient(45deg,#b9ddf1 25%,transparent 25%,transparent 75%,#b9ddf1 75%),linear-gradient(45deg,#b9ddf1 25%,#faf8ef 25%,#faf8ef 75%,#b9ddf1 75%);background-position:0 0,72px 72px;background-size:144px 144px}
-.modern-desktop.scene-contact .footer-copy{position:absolute;z-index:3;top:9%;left:0;width:100%;text-align:center;padding:0 clamp(20px,5.3vw,82px)}
-.modern-desktop.scene-contact .footer-copy>p{margin:0 0 22px;font-size:10px;font-weight:700;letter-spacing:1.8px;color:#35586c}
-.modern-desktop.scene-contact .footer-copy h2{display:flex;flex-direction:column;align-items:center;width:100%;max-width:none;margin:0;font:700 clamp(58px,9.3vw,148px)/.82 Georgia,"Times New Roman",serif;letter-spacing:-.078em;color:#101416}
-.modern-desktop.scene-contact .footer-copy h2 span{white-space:nowrap}
-.modern-desktop.scene-contact .footer-talk{display:flex;align-items:center;justify-content:flex-start;gap:10px;width:100%;margin-top:68px;padding:12px 19px;border:1px solid #e5c96f;border-radius:999px;background:#ffde8b;font:600 13px var(--font-ui);box-shadow:0 8px 20px #523b1c13;transition:transform .2s ease}
-.modern-desktop.scene-contact .footer-talk:hover{transform:translateY(-2px)}
-.modern-desktop.scene-contact .footer-photo{position:absolute;z-index:1;left:50%;bottom:-23vh;transform:translateX(-50%);width:auto;height:100vh;aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;animation:footer-peek-center .75s cubic-bezier(.2,.8,.2,1) both}
-.modern-desktop.scene-contact .footer-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 18px #172a301c)}
-.modern-desktop.scene-contact .footer-caption{position:absolute;z-index:4;left:clamp(24px,7vw,100px);bottom:13%;margin:0;padding:8px 12px;border-radius:999px;background:#fffdf2cc;color:#385867;font-size:11px;transform:rotate(-3deg)}
-.modern-desktop.scene-contact .footer-signature{position:absolute;z-index:4;right:clamp(30px,8vw,125px);bottom:8%;color:#315eb4;font:500 clamp(55px,7vw,100px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
-.modern-desktop.scene-contact .footer-doodle{position:absolute;z-index:2;font-size:clamp(38px,5vw,68px);line-height:1;pointer-events:none;text-shadow:0 2px 0 #fff8}
-.modern-desktop.scene-contact .flower-left{top:19%;left:18%;color:#e9b64e;transform:rotate(-12deg)}
-.modern-desktop.scene-contact .flower-right{top:16%;right:18%;color:#d56e72;transform:rotate(12deg)}
-.modern-desktop.scene-contact .footer-bar{position:relative;z-index:2;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(20px,5vw,72px);color:#34505d;font:13px Georgia,"Times New Roman",serif}
-.modern-desktop.scene-contact .footer-bar nav{display:flex;align-items:stretch;gap:4px}
-.modern-desktop.scene-contact .footer-bar nav a{display:flex;align-items:center;gap:7px;padding:11px 15px;border:1px solid #ebd080;border-radius:12px 12px 4px 4px;background:#ffe198;color:#332d22;white-space:nowrap;transition:transform .2s ease}
-.modern-desktop.scene-contact .footer-bar nav a:hover{transform:translateY(-3px)}
+.modern-desktop .yash-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:0 0 20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;scroll-margin-top:0;color:#171b1c;background:#fbf9f1}
+.modern-desktop .footer-stage{position:relative;isolation:isolate;min-height:calc(100svh - 98px);display:flex;align-items:center;overflow:hidden;padding:7vh 6vw 8vh;background-color:#faf8ef;background-image:linear-gradient(45deg,#b9ddf1 25%,transparent 25%,transparent 75%,#b9ddf1 75%),linear-gradient(45deg,#b9ddf1 25%,#faf8ef 25%,#faf8ef 75%,#b9ddf1 75%);background-position:0 0,72px 72px;background-size:144px 144px}
+.modern-desktop .footer-copy{position:absolute;z-index:3;top:9%;left:0;width:100%;text-align:center;padding:0 clamp(20px,5.3vw,82px)}
+.modern-desktop .footer-copy>p{margin:0 0 22px;font-size:10px;font-weight:700;letter-spacing:1.8px;color:#35586c}
+.modern-desktop .footer-copy h2{display:flex;flex-direction:column;align-items:center;width:100%;max-width:none;margin:0;font:700 clamp(58px,9.3vw,148px)/.82 Georgia,"Times New Roman",serif;letter-spacing:-.078em;color:#101416}
+.modern-desktop .footer-copy h2 span{white-space:nowrap}
+.modern-desktop .footer-talk{display:flex;align-items:center;justify-content:flex-start;gap:10px;width:100%;margin-top:68px;padding:12px 19px;border:1px solid #e5c96f;border-radius:999px;background:#ffde8b;font:600 13px var(--font-ui);box-shadow:0 8px 20px #523b1c13;transition:transform .2s ease}
+.modern-desktop .footer-talk:hover{transform:translateY(-2px)}
+.modern-desktop .footer-photo{position:absolute;z-index:1;left:50%;bottom:-23vh;transform:translateX(-50%);width:auto;height:100vh;aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;animation:footer-peek-center .75s cubic-bezier(.2,.8,.2,1) both}
+.modern-desktop .footer-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 18px #172a301c)}
+.modern-desktop .footer-caption{position:absolute;z-index:4;left:clamp(24px,7vw,100px);bottom:13%;margin:0;padding:8px 12px;border-radius:999px;background:#fffdf2cc;color:#385867;font-size:11px;transform:rotate(-3deg)}
+.modern-desktop .footer-signature{position:absolute;z-index:4;right:clamp(30px,8vw,125px);bottom:8%;color:#315eb4;font:500 clamp(55px,7vw,100px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
+.modern-desktop .footer-doodle{position:absolute;z-index:2;font-size:clamp(38px,5vw,68px);line-height:1;pointer-events:none;text-shadow:0 2px 0 #fff8}
+.modern-desktop .flower-left{top:19%;left:18%;color:#e9b64e;transform:rotate(-12deg)}
+.modern-desktop .flower-right{top:16%;right:18%;color:#d56e72;transform:rotate(12deg)}
+.modern-desktop .footer-bar{position:relative;z-index:2;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(20px,5vw,72px);color:#34505d;font:13px Georgia,"Times New Roman",serif}
+.modern-desktop .footer-bar nav{display:flex;align-items:stretch;gap:4px}
+.modern-desktop .footer-bar nav a{display:flex;align-items:center;gap:7px;padding:11px 15px;border:1px solid #ebd080;border-radius:12px 12px 4px 4px;background:#ffe198;color:#332d22;white-space:nowrap;transition:transform .2s ease}
+.modern-desktop .footer-bar nav a:hover{transform:translateY(-3px)}
 @keyframes footer-peek-right{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @keyframes footer-peek-center{from{opacity:0;transform:translate(-50%,28px)}to{opacity:1;transform:translate(-50%,0)}}
 @media(max-width:700px){
@@ -156,59 +156,59 @@
  .modern-desktop .company-marquee-item{flex-basis:136px}
  .modern-desktop .company-marquee-logo{height:76px}
  .modern-desktop .experience-icon.company-mark{width:60px;height:60px;flex-basis:60px}
- .modern-desktop.scene-contact .yash-footer{padding-bottom:12px}
- .modern-desktop.scene-contact .footer-stage{min-height:calc(100svh - 154px);align-items:flex-start;padding:36px 18px 34px;background-size:88px 88px;background-position:0 0,44px 44px}
- .modern-desktop.scene-contact .footer-copy{top:8%;width:100%;padding:0;}
- .modern-desktop.scene-contact .footer-copy>p{font-size:8px;letter-spacing:1.1px;margin-bottom:17px}
- .modern-desktop.scene-contact .footer-copy h2{font-size:clamp(40px,10vw,70px);line-height:.9;max-width:100%}
- .modern-desktop.scene-contact .footer-copy h2 span{white-space:normal}
- .modern-desktop.scene-contact .footer-talk{margin-top:19px;font-size:11px;padding:10px 13px}
- .modern-desktop.scene-contact .footer-photo{left:50%;bottom:-14vh;height:78vh}
- .modern-desktop.scene-contact .footer-caption{left:14px;bottom:9%;max-width:42%;font-size:9px}
- .modern-desktop.scene-contact .footer-signature{right:15px;bottom:5%;font-size:clamp(42px,12vw,58px)}
- .modern-desktop.scene-contact .footer-doodle{font-size:36px}
- .modern-desktop.scene-contact .flower-left{top:12%;left:7%}
- .modern-desktop.scene-contact .flower-right{top:22%;right:7%}
- .modern-desktop.scene-contact .footer-bar{min-height:142px;align-items:flex-start;flex-direction:column;gap:9px;padding:12px 16px;font-size:10px}
- .modern-desktop.scene-contact .footer-bar nav{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
- .modern-desktop.scene-contact .footer-bar nav a{justify-content:center;padding:9px 5px;font-size:10px}
+ .modern-desktop .yash-footer{padding-bottom:12px}
+ .modern-desktop .footer-stage{min-height:calc(100svh - 154px);align-items:flex-start;padding:36px 18px 34px;background-size:88px 88px;background-position:0 0,44px 44px}
+ .modern-desktop .footer-copy{top:8%;width:100%;padding:0;}
+ .modern-desktop .footer-copy>p{font-size:8px;letter-spacing:1.1px;margin-bottom:17px}
+ .modern-desktop .footer-copy h2{font-size:clamp(40px,10vw,70px);line-height:.9;max-width:100%}
+ .modern-desktop .footer-copy h2 span{white-space:normal}
+ .modern-desktop .footer-talk{margin-top:19px;font-size:11px;padding:10px 13px}
+ .modern-desktop .footer-photo{left:50%;bottom:-14vh;height:78vh}
+ .modern-desktop .footer-caption{left:14px;bottom:9%;max-width:42%;font-size:9px}
+ .modern-desktop .footer-signature{right:15px;bottom:5%;font-size:clamp(42px,12vw,58px)}
+ .modern-desktop .footer-doodle{font-size:36px}
+ .modern-desktop .flower-left{top:12%;left:7%}
+ .modern-desktop .flower-right{top:22%;right:7%}
+ .modern-desktop .footer-bar{min-height:142px;align-items:flex-start;flex-direction:column;gap:9px;padding:12px 16px;font-size:10px}
+ .modern-desktop .footer-bar nav{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+ .modern-desktop .footer-bar nav a{justify-content:center;padding:9px 5px;font-size:10px}
 }
 
 /* Yashf-inspired footer: checkerboard, oversized two-line wordmark and compact link rail. */
-.modern-desktop.scene-contact .yash-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:0;display:flex;flex-direction:column;overflow:hidden;scroll-margin-top:0;color:#11130f;background:#fbf9f1}
-.modern-desktop.scene-contact .footer-stage{position:relative;isolation:isolate;flex:1;min-height:calc(100svh - 72px);overflow:hidden;background-color:#fbf9f1;background-image:linear-gradient(90deg,#badcf0 50%,transparent 50%),linear-gradient(#badcf0 50%,transparent 50%);background-size:144px 144px;background-position:0 0,0 0}
-.modern-desktop.scene-contact .footer-copy{position:absolute;inset:50% 0 auto;transform:translateY(-54%);width:100%;padding:0 3vw;text-align:center;z-index:1}
-.modern-desktop.scene-contact .footer-copy h2{display:flex;flex-direction:column;align-items:center;margin:0;color:#10120f;font-family:Georgia,"Times New Roman",serif;font-size:clamp(74px,11vw,166px);font-weight:700;line-height:.76;letter-spacing:-.075em}
-.modern-desktop.scene-contact .footer-copy h2>span{white-space:nowrap}
-.modern-desktop.scene-contact .footer-second-line{display:flex;align-items:center;gap:.13em}
-.modern-desktop.scene-contact .footer-second-line i{font-style:normal;color:#d9ef38;font-family:Arial,sans-serif;font-size:.55em;line-height:1;letter-spacing:0}
-.modern-desktop.scene-contact .footer-doodle{position:absolute;z-index:2;line-height:1;pointer-events:none}
-.modern-desktop.scene-contact .flower-left{top:13%;left:15%;font-size:clamp(32px,4vw,62px);color:#f0bc4d;transform:rotate(-15deg)}
-.modern-desktop.scene-contact .flower-right{top:13%;right:17%;font-size:clamp(32px,4vw,62px);color:#db777c;transform:rotate(12deg)}
-.modern-desktop.scene-contact .flower-right-small{top:22%;right:13%;font-size:30px;color:#f0bc4d;transform:rotate(-12deg)}
-.modern-desktop.scene-contact .footer-dot{display:none}
-.modern-desktop.scene-contact .footer-signature{position:absolute;z-index:3;right:clamp(50px,12vw,190px);bottom:8%;color:#315eb4;font:500 clamp(52px,7vw,100px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
-.modern-desktop.scene-contact .footer-heart{position:absolute;right:clamp(35px,9vw,135px);bottom:11%;color:#ed7c70;font-size:clamp(17px,2vw,27px);transform:rotate(15deg)}
-.modern-desktop.scene-contact .footer-bar{box-sizing:border-box;position:relative;z-index:3;min-height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:10px clamp(22px,5vw,72px);color:#34505d;background:#fbf9f1;font:13px Georgia,"Times New Roman",serif}
-.modern-desktop.scene-contact .footer-bar nav{grid-column:2;grid-row:1;display:flex;align-items:stretch;gap:4px}
-.modern-desktop.scene-contact .footer-bar nav a,.modern-desktop.scene-contact .footer-top{display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 15px;border:1px solid #ebd080;border-radius:12px 12px 4px 4px;background:#ffe198;color:#332d22;white-space:nowrap;transition:transform .2s ease}
-.modern-desktop.scene-contact .footer-bar nav a:hover,.modern-desktop.scene-contact .footer-top:hover{transform:translateY(-3px)}
-.modern-desktop.scene-contact .footer-bar nav svg,.modern-desktop.scene-contact .footer-top svg{font-size:14px}
-.modern-desktop.scene-contact .footer-copyright{grid-column:1;grid-row:1;white-space:nowrap}
-.modern-desktop.scene-contact .footer-top{grid-column:3;grid-row:1;justify-self:end}
+.modern-desktop .yash-footer{box-sizing:border-box;width:100vw;max-width:none;min-height:100svh;margin:0 0 0 calc(50% - 50vw);padding:0;display:flex;flex-direction:column;overflow:hidden;scroll-margin-top:0;color:#11130f;background:#fbf9f1}
+.modern-desktop .footer-stage{position:relative;isolation:isolate;flex:1;min-height:calc(100svh - 72px);overflow:hidden;background-color:#fbf9f1;background-image:linear-gradient(45deg,#badcf0 25%,transparent 25%,transparent 75%,#badcf0 75%),linear-gradient(45deg,#badcf0 25%,#fbf9f1 25%,#fbf9f1 75%,#badcf0 75%);background-size:144px 144px;background-position:0 0,72px 72px}
+.modern-desktop .footer-copy{position:absolute;inset:50% 0 auto;transform:translateY(-54%);width:100%;padding:0 3vw;text-align:center;z-index:1}
+.modern-desktop .footer-copy h2{display:flex;flex-direction:column;align-items:center;margin:0;color:#10120f;font-family:Georgia,"Times New Roman",serif;font-size:clamp(74px,11vw,166px);font-weight:700;line-height:.76;letter-spacing:-.075em}
+.modern-desktop .footer-copy h2>span{white-space:nowrap}
+.modern-desktop .footer-second-line{display:flex;align-items:center;gap:.13em}
+.modern-desktop .footer-second-line i{font-style:normal;color:#d9ef38;font-family:Arial,sans-serif;font-size:.55em;line-height:1;letter-spacing:0}
+.modern-desktop .footer-doodle{position:absolute;z-index:2;line-height:1;pointer-events:none}
+.modern-desktop .flower-left{top:13%;left:15%;font-size:clamp(32px,4vw,62px);color:#f0bc4d;transform:rotate(-15deg)}
+.modern-desktop .flower-right{top:13%;right:17%;font-size:clamp(32px,4vw,62px);color:#db777c;transform:rotate(12deg)}
+.modern-desktop .flower-right-small{top:22%;right:13%;font-size:30px;color:#f0bc4d;transform:rotate(-12deg)}
+.modern-desktop .footer-dot{display:none}
+.modern-desktop .footer-signature{position:absolute;z-index:3;right:clamp(50px,12vw,190px);bottom:8%;color:#315eb4;font:500 clamp(52px,7vw,100px)/1 "Segoe Print","Bradley Hand","Comic Sans MS",cursive;letter-spacing:-.08em;transform:rotate(-8deg)}
+.modern-desktop .footer-heart{position:absolute;right:clamp(35px,9vw,135px);bottom:11%;color:#ed7c70;font-size:clamp(17px,2vw,27px);transform:rotate(15deg)}
+.modern-desktop .footer-bar{box-sizing:border-box;position:relative;z-index:3;min-height:72px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:10px clamp(22px,5vw,72px);color:#34505d;background:#fbf9f1;font:13px Georgia,"Times New Roman",serif}
+.modern-desktop .footer-bar nav{grid-column:2;grid-row:1;display:flex;align-items:stretch;gap:4px}
+.modern-desktop .footer-bar nav a,.modern-desktop .footer-top{display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 15px;border:1px solid #ebd080;border-radius:12px 12px 4px 4px;background:#ffe198;color:#332d22;white-space:nowrap;transition:transform .2s ease}
+.modern-desktop .footer-bar nav a:hover,.modern-desktop .footer-top:hover{transform:translateY(-3px)}
+.modern-desktop .footer-bar nav svg,.modern-desktop .footer-top svg{font-size:14px}
+.modern-desktop .footer-copyright{grid-column:1;grid-row:1;white-space:nowrap}
+.modern-desktop .footer-top{grid-column:3;grid-row:1;justify-self:end}
 @media(max-width:700px){
- .modern-desktop.scene-contact .yash-footer{min-height:100svh}
- .modern-desktop.scene-contact .footer-stage{min-height:calc(100svh - 132px);background-size:92px 92px}
- .modern-desktop.scene-contact .footer-copy{padding:0 10px;transform:translateY(-50%)}
- .modern-desktop.scene-contact .footer-copy h2{font-size:clamp(48px,13vw,86px)}
- .modern-desktop.scene-contact .flower-left{left:8%;top:18%}
- .modern-desktop.scene-contact .flower-right{right:9%;top:17%}
- .modern-desktop.scene-contact .flower-right-small{right:6%;top:27%;font-size:22px}
- .modern-desktop.scene-contact .footer-signature{right:12%;bottom:7%;font-size:clamp(44px,13vw,64px)}
- .modern-desktop.scene-contact .footer-heart{right:7%;bottom:10%}
- .modern-desktop.scene-contact .footer-bar{min-height:132px;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:7px 10px;padding:12px 14px;font-size:10px}
- .modern-desktop.scene-contact .footer-bar nav{grid-column:1/-1;grid-row:2;justify-self:stretch;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
- .modern-desktop.scene-contact .footer-bar nav a{padding:9px 3px;font-size:9px;gap:4px}
- .modern-desktop.scene-contact .footer-copyright{grid-column:1;grid-row:1;font-size:9px}
- .modern-desktop.scene-contact .footer-top{grid-column:2;grid-row:1;padding:8px 9px;font-size:9px}
+ .modern-desktop .yash-footer{min-height:100svh}
+ .modern-desktop .footer-stage{min-height:calc(100svh - 132px);background-size:92px 92px}
+ .modern-desktop .footer-copy{padding:0 10px;transform:translateY(-50%)}
+ .modern-desktop .footer-copy h2{font-size:clamp(48px,13vw,86px)}
+ .modern-desktop .flower-left{left:8%;top:18%}
+ .modern-desktop .flower-right{right:9%;top:17%}
+ .modern-desktop .flower-right-small{right:6%;top:27%;font-size:22px}
+ .modern-desktop .footer-signature{right:12%;bottom:7%;font-size:clamp(44px,13vw,64px)}
+ .modern-desktop .footer-heart{right:7%;bottom:10%}
+ .modern-desktop .footer-bar{min-height:132px;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:7px 10px;padding:12px 14px;font-size:10px}
+ .modern-desktop .footer-bar nav{grid-column:1/-1;grid-row:2;justify-self:stretch;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+ .modern-desktop .footer-bar nav a{padding:9px 3px;font-size:9px;gap:4px}
+ .modern-desktop .footer-copyright{grid-column:1;grid-row:1;font-size:9px}
+ .modern-desktop .footer-top{grid-column:2;grid-row:1;padding:8px 9px;font-size:9px}
 }
